@@ -1,6 +1,7 @@
 package com.example.bank_app;
 
 public class BankAccount {
+
     private double checkingBalance = 0.00;
     private double savingsBalance = 0.00;
     private final double checkingOpeningDeposit;
@@ -22,7 +23,7 @@ public class BankAccount {
         System.out.print("\nSavings Balance: " + this.savingsBalance + "\n");
         return this.savingsBalance;
     }
-    public void withdrawFromChecking(double amount) {
+    public void withdrawFromChecking( double amount ) {
         if( (this.checkingBalance-amount ) >= 0 ) {
             this.checkingBalance -= amount;
             System.out.print("\nWithdrew From Checking: " + amount + "\n");
@@ -31,8 +32,8 @@ public class BankAccount {
             System.out.println("\nError: Insufficent funds please transfer from Savings Account! Transaction Voided!");
         }
     }
-    public void withdrawFromSavings(double amount) {
-        if ((this.savingsBalance - amount) >= 0) {
+    public void withdrawFromSavings( double amount ) {
+        if ( ( this.savingsBalance - amount ) >= 0) {
             this.savingsBalance -= amount;
             System.out.print("\nWithdrew From Savings: " + amount + "\n");
         } else {
